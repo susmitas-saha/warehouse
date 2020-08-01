@@ -1,0 +1,20 @@
+{"result": [
+                {
+                  "Payload": "rijul_harami",
+                  "id": 1,
+                  "REF_MSG_TYPE": "pacs.008",
+                  "MSG_ID": "rijulhchuthiya",
+                  "PAYMENT_UNIQUE_ID": "420",
+                  "CREATE_DATE": "2020-06-23T00:00:00",
+                  "LATEST_STATUS": "RETRY"
+              },
+                  {
+                  "Payload": "rijul_chotolok",
+                  "id": 2,
+                  "REF_MSG_TYPE": "pacs.008",
+                  "MSG_ID": "rijuljanoar",
+                  "PAYMENT_UNIQUE_ID": "421",
+                  "CREATE_DATE": "2020-06-23T00:00:00",
+                  "LATEST_STATUS": "RETRY"
+              }
+            ]}

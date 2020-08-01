@@ -1,0 +1,61 @@
+#%RAML 1.0
+baseUri: https://anypoint.mulesoft.com/mocking/api/v1/links/704cd82f-2e84-4fd9-b658-1be38704fde0/ # 
+title: warehouse
+description: This is My warehouse
+
+
+/warehouse:
+  get:
+    queryParameters:
+      lateststatus:
+       required: true
+       minLength: 3
+       type: string
+      
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include getResponse.json
+      404:
+        body:
+          application/json:
+            example:
+              {
+                pending
+              }
+      500:
+        body:
+          application/json:
+            example:
+              {
+                pending
+              }
+
+  post:
+    description: payment type
+    body:
+      application/json:
+        example: !include request.json
+    responses:
+      200:
+        body:
+          application/xml:
+            example: !include successresponse.xml
+      404:
+        body:
+          application/json:
+            example:
+              {
+                pending
+              }
+      500:
+        body:
+          application/json:
+            example:
+              {
+                pending
+              }
+
+
+          

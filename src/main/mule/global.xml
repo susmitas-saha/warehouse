@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:db="http://www.mulesoft.org/schema/mule/db" xmlns:file="http://www.mulesoft.org/schema/mule/file"
+	xmlns:apikit="http://www.mulesoft.org/schema/mule/mule-apikit"
+	xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/mule-apikit http://www.mulesoft.org/schema/mule/mule-apikit/current/mule-apikit.xsd
+http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/file/current/mule-file.xsd
+http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="b5b844e6-159e-4dcf-aae5-1550e1a29cbb" >
+		<http:listener-connection host="localhost" port="8094" />
+	</http:listener-config>
+	<apikit:config outboundHeadersMapName="outboundHeadersMapName" httpStatusVarName="httpStatus" doc:name="Router" doc:id="5066b72b-8292-4d91-9c87-042b93d82ab4" name="api-config" api="api\warehouse.raml" queryParamsStrictValidation="true"/>
+	<file:config name="File_Config" doc:name="File Config" doc:id="f9432f88-0711-4c14-b8f9-0053ba43d68f" >
+		<file:connection workingDir="C:\Users\susmita\Desktop\payment_project" />
+	</file:config>
+	<db:config name="Database_Config" doc:name="Database Config" doc:id="52b9d5c7-b75a-466e-8e46-c92becb402e4" >
+		<db:my-sql-connection host="localhost" port="3306" user="root" password="admin" database="warehouse" />
+	</db:config>
+</mule>

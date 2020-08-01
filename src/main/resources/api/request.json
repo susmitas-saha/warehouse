@@ -1,0 +1,53 @@
+{"codeType": "DAT",
+  "msgDetails": {
+    "msgTimestamp": "2020-05-17T11:24:49.341+05:30",
+    "originalISOMsgname": "pacs.008.001.07",
+    "originalMsgCreationDate": "1996-06-18T23:14:53.59"
+  },
+  "paymentInfo": {
+    "msgIdentification": "SUSU1235697",
+    "originalMsgIdentification": "ASMI123456",
+    "originalE2EIdentification": "RIVU123456",
+    "originalTxnIdentification": "ASMI123456",
+    "paymentMsg": {
+      "Document": {
+        "FIToFICstmrCdtTrf": {
+          "GrpHdr": {
+            "MsgId": "SUSU1235697",
+            "CreDtTm": "1996-06-18T23:14:53.59",
+            "NbOfTxs": "1",
+            "SttlmInf": {
+              "SttlmMtd": "COVE"
+            }
+          },
+          "CdtTrfTxInf": {
+            "PmtId": {
+              "EndToEndId": "RIVU123456",
+              "TxId": null
+            },
+            "IntrBkSttlmAmt": "1440410.23491",
+            "ChrgBr": "SLEV",
+            "Dbtr": null,
+            "DbtrAgt": {
+              "FinInstnId": null
+            },
+            "CdtrAgt": {
+              "FinInstnId": null
+            },
+            "Cdtr": null
+          },
+          "SplmtryData": {
+            "Envlp": null
+          }
+        }
+      }
+    },
+    "fillerField": "NA"
+  },
+  "msgStatusInfo": {
+    "procStatus": "NA",
+    "procStatusRsnCode": "NA",
+    "procStatusRsnCodeDesc": "NA",
+    "procStatusAddnInfo": "NA"
+  }
+}
